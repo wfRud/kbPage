@@ -1,0 +1,109 @@
+@import "mixins.scss";
+@import "varriables.scss";
+
+header {
+  .container {
+    padding: 0;
+    position: relative;
+    height: 100%;
+
+    .navbar {
+      padding: 0;
+      background: #fff;
+
+      .container {
+        height: 100px;
+
+        .navbar-toggler {
+          width: 70px;
+          height: 62px;
+          padding: 0.15rem 0.45rem;
+          background-color: transparent;
+          border: none;
+
+          .navbar-toggler-icon {
+            background: none;
+            width: 1.8em;
+            height: 1.2em;
+            position: relative;
+
+            .line {
+              width: 40px;
+              height: 40px;
+              position: absolute;
+              left: 0;
+              width: 100%;
+              float: left;
+              height: 3px;
+              background-color: $dark;
+              transition: top 0.3s, bottom 0.3s, transform 0.3s 0.3s;
+              &:first-of-type {
+                top: 0;
+              }
+              &:first-of-type + .line {
+                top: 50%;
+                transform: translateY(-50%);
+              }
+              &:last-of-type {
+                bottom: 0;
+              }
+            }
+          }
+
+          &:hover {
+            .line:first-of-type {
+              top: 50%;
+              transform: translateY(-50%) rotate(45deg);
+            }
+            .line:first-of-type + .line {
+              opacity: 0;
+            }
+            .line:last-of-type {
+              bottom: 50%;
+              transform: translateY(50%) rotate(-45deg);
+            }
+          }
+        }
+
+        .navbar-brand {
+          height: 100%;
+
+          .logo {
+            width: 100%;
+            height: 100%;
+            padding: 2% 0;
+            position: relative;
+
+            &:hover {
+              cursor: pointer;
+            }
+          }
+        }
+
+        .navbar-collapse {
+          background-color: #fff;
+          z-index: 999;
+          text-align: center;
+          .navbar-nav {
+            min-width: 45%;
+            justify-content: space-between;
+
+            .menu-item {
+              a {
+                font-size: 1rem;
+                color: $dark;
+                letter-spacing: 0.1rem;
+                transition: 0.3s;
+
+                &:hover {
+                  color: $current;
+                  cursor: pointer;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

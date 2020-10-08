@@ -1,0 +1,140 @@
+footer {
+  background: $dark;
+  .container {
+    align-items: center;
+    min-height: 300px;
+
+    .text {
+      margin-top: 7%;
+      .contact {
+        color: #fff;
+        line-height: 1.5;
+        h3 {
+          margin-bottom: 5%;
+          font-family: $heading-font;
+          font-weight: 700;
+          font-size: 1.3rem;
+          letter-spacing: 0.2rem;
+        }
+        p {
+          font-family: $paragraphs-font;
+        }
+      }
+      @media (max-width: 575.98px) {
+        text-align: center;
+      }
+    }
+    .icons {
+      margin-top: 7%;
+      .social {
+        text-align: center;
+        margin-top: 10%;
+        .icon {
+          margin-right: 5%;
+          font-size: 1.5rem;
+          color: #fff;
+          transition: 0.5s;
+          &:hover {
+            cursor: pointer;
+            transform: scale(1.5);
+            transition: 0.5s;
+          }
+        }
+      }
+    }
+
+    // Form Styles
+    .form-wrap {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 100vw;
+      height: 100vh;
+      background-color: rgba(0, 0, 0, 0.8);
+      visibility: hidden;
+      opacity: 0;
+      transition: visibility 0s, opacity 0.5s linear;
+
+      .form {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 35%;
+        min-width: 320px;
+        min-height: 50%;
+        max-height: 65%;
+        padding: 20px;
+        background-color: #fff;
+        font-family: $paragraphs-font;
+        border: solid 4px $dark;
+        border-radius: 5px;
+        transition: height 0.3s;
+        .wpforms-form {
+          .wpforms-field-container {
+            .wpforms-field {
+              width: 80%;
+              margin: 0 auto;
+              .wpforms-field-label {
+                font-weight: 300;
+                color: $dark;
+              }
+              input {
+                border: solid 1px $dark;
+                border-radius: 5px;
+                color: $dark;
+              }
+              textarea {
+                border: solid 1px $dark;
+                border-radius: 5px;
+                color: $dark;
+                resize: none;
+              }
+            }
+          }
+          .wpforms-submit-container {
+            width: 80%;
+            margin: 0 auto;
+            .btn-cta {
+              @extend %btn-cta-shared;
+              float: left;
+              color: $dark;
+              padding: 0;
+            }
+          }
+        }
+      }
+      .close-btn {
+        position: absolute;
+        top: 3%;
+        right: 2%;
+        width: 20px;
+        height: 3px;
+        background-color: $dark;
+        border-radius: 5px;
+        transform: rotate(45deg);
+        transition: transform 0.5s;
+        &:before {
+          content: "";
+          position: absolute;
+          width: 20px;
+          height: 3px;
+          background-color: $dark;
+          border-radius: 5px;
+          transform: rotate(-90deg);
+        }
+        &:hover {
+          cursor: pointer;
+          transform: scale(1.2);
+        }
+      }
+      &.visible {
+        display: block;
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+  }
+}

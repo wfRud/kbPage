@@ -1,0 +1,87 @@
+@import "varriables.scss";
+
+#slider {
+  margin-top: 10px;
+  .container {
+    padding: 0;
+  }
+}
+.about {
+  min-height: 600px;
+  overflow: hidden;
+  .row {
+    .image {
+      .picture {
+        width: 280px;
+        height: 400px;
+        @media (max-width: 575.98px) {
+          display: none;
+        }
+        @media (max-width: 767.98px) {
+          width: 280px;
+          height: 430px;
+        }
+      }
+    }
+  }
+}
+
+.graphic {
+  min-height: 600px;
+  overflow: hidden;
+  .row {
+    .image {
+      margin-top: 5%;
+      .picture {
+        @extend %picture-shared;
+      }
+      .picture:nth-of-type(2) {
+        @extend %picture-shared-scnd;
+      }
+    }
+    .lyrics {
+      margin: 5% 0;
+      .title {
+        text-align: right;
+      }
+      .text {
+        text-align: right;
+        margin-bottom: 10%;
+      }
+      .btn-cta {
+        @extend %btn-cta-shared;
+      }
+    }
+  }
+}
+
+.drawing {
+  min-height: 700px;
+  margin-bottom: 5%;
+  overflow: hidden;
+  .row {
+    .image {
+      margin-top: 10%;
+      .picture {
+        @extend %picture-shared;
+        right: 0;
+      }
+      .picture:nth-of-type(2) {
+        @extend %picture-shared-scnd;
+      }
+    }
+    .lyrics {
+      .title {
+        text-align: left;
+      }
+      .text {
+        text-align: left;
+        margin-bottom: 10%;
+      }
+      .btn-cta {
+        @extend %btn-cta-shared;
+        float: left;
+      }
+    }
+  }
+}

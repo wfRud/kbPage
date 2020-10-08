@@ -1,0 +1,136 @@
+@import "mixins.scss";
+@import "varriables.scss";
+
+// Global Styles
+
+.row {
+  margin: 0;
+  justify-content: space-between;
+  .lyrics {
+    margin: 10% 0;
+    padding: 0;
+    .title {
+      margin-bottom: 10%;
+      font-family: $heading-font;
+      font-weight: 700;
+      font-size: 2em;
+      @media (max-width: 767.98px) {
+        font-size: 1.5em;
+      }
+      &--small {
+        margin-bottom: 6%;
+        font-size: 1.5em;
+        @media (max-width: 767.98px) {
+          font-size: 1.2em;
+        }
+      }
+    }
+    .text {
+      font-family: $paragraphs-font;
+      line-height: 1.8rem;
+      @media (max-width: 767.98px) {
+        font-size: 0.9em;
+      }
+    }
+  }
+
+  .image {
+    margin-top: 10%;
+    padding: 0;
+
+    .picture {
+      float: right;
+    }
+  }
+}
+
+.gallery > br {
+  display: none !important;
+}
+
+%picture-shared {
+  width: 320px;
+  height: 470px;
+  position: absolute;
+  transition: all 0.4s ease-in-out;
+  &:hover {
+    cursor: pointer;
+    @include hoverShadow;
+    z-index: 1;
+    transform: scale(1.1);
+  }
+  @media (max-width: 575.98px) {
+    display: none;
+  }
+  @media (max-width: 767.98px) {
+    width: 280px;
+    height: 430px;
+  }
+}
+
+%picture-shared-scnd {
+  width: 320px;
+  height: 470px;
+  position: absolute;
+  top: 20%;
+  left: 20%;
+  transition: all 0.4s ease-in-out;
+  &:hover {
+    cursor: pointer;
+    @include hoverShadow;
+    z-index: 2;
+    transform: scale(1.1);
+  }
+  @media (max-width: 575.98px) {
+    display: none;
+  }
+  @media (max-width: 767.98px) {
+    width: 280px;
+    height: 430px;
+  }
+}
+
+%btn-cta-shared {
+  display: block;
+  float: right;
+  width: 150px;
+  height: 40px;
+  color: $dark;
+  text-align: center;
+  line-height: 40px;
+  font-family: $heading-font;
+  text-decoration: none;
+  border: 1px solid $dark;
+  transition: 0.5s;
+  background: transparent;
+  background-color: inherit;
+  background-position: 100% 0;
+  background-image: linear-gradient(45deg, $dark 50%, transparent 50%);
+  background-size: 500px;
+  &:hover {
+    cursor: pointer;
+    background-position: 0 100%;
+    color: $accent;
+    transition: 0.8s;
+    color: #fff;
+  }
+}
+
+// RWD
+@media (max-width: 575.98px) {
+}
+
+// Small devices (landscape phones, less than 768px)
+@media (max-width: 767.98px) {
+}
+
+// Medium devices (tablets, less than 992px)
+@media (max-width: 991.98px) {
+  .container {
+    max-width: 940px;
+  }
+}
+
+// Large devices (desktops, less than 1200px)
+@media (max-width: 1199.98px) {
+}
