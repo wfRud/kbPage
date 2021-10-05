@@ -5,7 +5,7 @@ Strona internetowa zbudowana w oparciu o WordPress
 
 ## Demo Strony
 
-[wfrud.pl](https://www.wfrud.pl/kbpage)
+[wfrud.pl](https://wfrud.000webhostapp.com/kbpage/)
 
 ### Użyte technologie
 
